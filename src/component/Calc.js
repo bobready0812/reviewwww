@@ -5,7 +5,8 @@ class Calc extends Component {
 
 state = {
     num1: 0,
-    num2: 0
+    num2: 0,
+    result: 0,
 }   
 
 handleOnChange = (e) => {
@@ -22,6 +23,14 @@ handleOnChange2 = (e) => {
     } )
  }
 
+handleClick = () => {
+  this.setState( {
+    result: Number(this.state.num1)*Number (this.state.num2)
+
+  } )
+
+}
+
 render() {
 
 
@@ -31,6 +40,8 @@ render() {
         <h1> {this.state.num1} </h1>
         <input type="text"  onChange={this.handleOnChange2}></input>
         <h1> {this.state.num2} </h1>
+        <button onClick={this.handleClick}>계산</button>
+        <h1> Result:{this.state.result} </h1>
         </Fragment>
     )
 }
