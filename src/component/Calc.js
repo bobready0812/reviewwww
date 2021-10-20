@@ -9,8 +9,18 @@ state = {
 }   
 
 handleOnChange = (e) => {
-    console.log(e.target.value);
+   this.setState( {
+   num1: e.target.value
+
+   } )
 }
+
+handleOnChange2 = (e) => {
+    this.setState( {
+    num2: e.target.value
+ 
+    } )
+ }
 
 render() {
 
@@ -19,7 +29,8 @@ render() {
         <Fragment>
         <input type="text" onChange={this.handleOnChange}></input>
         <h1> {this.state.num1} </h1>
-        <input type="text"></input>
+        <input type="text"  onChange={this.handleOnChange2}></input>
+        <h1> {this.state.num2} </h1>
         </Fragment>
     )
 }
