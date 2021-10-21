@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
+import Lotto from './component/Lotto';
 
-import Calc from './component/Calc';
+
 
 function App() {
   
@@ -8,7 +9,8 @@ function App() {
   
    
      return (
-       <Calc />
+       <Lotto />
+
       );
     }
     
